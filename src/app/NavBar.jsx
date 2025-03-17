@@ -3,19 +3,29 @@ import { useState } from "react";
 
 export default function NavBar() {
   const [usersMenu, setUsersMenu] = useState(false);
+  const [serviciosMenu, setServiciosMenu] = useState(false);
 
   return (
-    <nav className="relative h-10 text-center flex justify-center items-center rounded-xl border border-white/20 backdrop-blur-md">
-      <ul className="flex space-x-20 items-center text-xs text-white">
-        <li className="relative group">
-          <span className="px-4 py-2 mn-h-[40px] cursor-pointer">
-            Servicios
-          </span>
-          <ul className="absolute left-0 mt-2 hidden w-40 bg-white text-black shadow-lg group-hover:block">
-            <li className="px-4 py-2 hover:bg-gray-200">Diseño Web</li>
-            <li className="px-4 py-2 hover:bg-gray-200">Marketing</li>
-            <li className="px-4 py-2 hover:bg-gray-200">SEO</li>
-          </ul>
+    <nav className="relative h-10 text-center flex justify-center items-center rounded-xl border border-white/80 backdrop-blur-xs">
+      <ul className="flex xl:space-x-40 sm:space-x-50 items-center xl:text-sm sm:from-neutral-900 text-white">
+        <li
+          className={`group px-2 py-0.5 cursor-pointer ${
+            serviciosMenu
+              ? "bg-gray-300/20 px-1 py-1 rounded-xl text-white"
+              : ""
+          }`}
+          onMouseEnter={() => setServiciosMenu(true)}
+          onMouseLeave={() => setServiciosMenu(false)}
+          onClick={() => setServiciosMenu(!serviciosMenu)}
+        >
+          Servicios
+          {serviciosMenu && (
+            <ul className="absolute left-1/2 top-9 transform -translate-x-1/2 min-h-[10vh] w-full group-hover:block flex flex-row justify-evenly items-center align-top text-black bg-gray-300/20 rounded-xl border border-white/90 backdrop-blur-xl">
+              <li>Diseño Web</li>
+              <li>Marketing</li>
+              <li>SEO</li>
+            </ul>
+          )}
         </li>
 
         <li>
@@ -25,16 +35,16 @@ export default function NavBar() {
         </li>
 
         <li
+          className={`users px-4 py-0.5 cursor-pointer ${
+            usersMenu ? "bg-green-200/20 px-1 py-1 rounded-xl text-white" : ""
+          }`}
           onMouseEnter={() => setUsersMenu(true)}
           onMouseLeave={() => setUsersMenu(false)}
           onClick={() => setUsersMenu(!usersMenu)}
-          className={`users px-4 py-2 cursor-pointer ${
-            usersMenu ? "bg-gray-900/70 px-3 py-1 rounded-md text-white" : ""
-          }`}
         >
           Users
           {usersMenu && (
-            <ul className="absolute left-1/2 top-11 transform -translate-x-1/2 min-h-[10vh] w-full users-hover:block flex flex-row justify-center items-center align-top text-black bg-gray-300 rounded-xl border border-white/20 backdrop-blur-xl">
+            <ul className="absolute left-1/2 top-9 transform -translate-x-1/2 min-h-[10vh] w-full users-hover:block flex flex-row justify-evenly items-center align-top text-black bg-gray-300 rounded-xl border border-white/90 backdrop-blur-xl">
               <li>Iniciar sesión</li>
               <li>Registrarse</li>
             </ul>

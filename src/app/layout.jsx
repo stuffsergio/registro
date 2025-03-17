@@ -12,8 +12,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="es">
       <body>
-        <div className="h-screen max-w-screen bg-[url('/bgAIGenerated.jpeg')] bg-cover bg-center priority">
-          <Home />
+        <div className="h-screen max-w-screen bg-[url('/adamantiums.webp')] bg-cover bg-center priority">
+          {children}
         </div>
       </body>
     </html>
