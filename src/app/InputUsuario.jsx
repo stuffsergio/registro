@@ -14,7 +14,7 @@ export default function InputUsuario() {
       <input
         type="text"
         name="nombre"
-        id="input-nombre"
+        id="inputNombre"
         className="bg-transparent rounded-[4px] font-secondary-font text-black text-xs text-left px-[10px] py-[5px] focus:outline-none"
         autoComplete="off"
         autoCorrect="off"

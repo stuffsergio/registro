@@ -20,6 +20,13 @@ export default function Form() {
       </h1>
     );
   }
+  const [inputNombre, setInputNombre] = useState("");
+  const [inputCorreo, setInputCorreo] = useState("");
+  const handleChange = (event) => {
+    setInputNombre(event.target.value);
+    setInputCorreo(event.target.value);
+  };
+  const isDisabled = inputNombre === "" || inputCorreo === "";
 
   return (
     <form
@@ -39,12 +46,20 @@ export default function Form() {
       <label className="text-left text-sm text-[#360000] pt-[20px] pb-[2px]">
         Nombre
       </label>
-      <InputUsuario />
+      <InputUsuario
+        name="inputNombre"
+        value={inputNombre}
+        onChange={handleChange}
+      />
       <label className="text-left text-sm text-[#360000] pt-[20px] pb-[2px]">
         Correo electrónico
       </label>
-      <InputCorreo />
-      <BotonSubmit />
+      <InputCorreo
+        name="inputCorreo"
+        value={inputCorreo}
+        onChange={handleChange}
+      />
+      <BotonSubmit isDisabled={isDisabled} />
       <Example />
     </form>
   );
