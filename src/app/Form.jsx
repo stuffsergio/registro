@@ -32,6 +32,7 @@ export default function Form() {
     <form
       action=""
       className="h-fit w-fit px-[20px] py-[40px] flex flex-col justify-center rounded-xl border border-white/80 backdrop-blur-md"
+      id="loginForm"
     >
       <p className="flex justify-center items-center text-center font-bold">
         <Image
@@ -48,6 +49,7 @@ export default function Form() {
       </label>
       <InputUsuario
         name="inputNombre"
+        id="nombre"
         value={inputNombre}
         onChange={handleChange}
       />
@@ -56,11 +58,11 @@ export default function Form() {
       </label>
       <InputCorreo
         name="inputCorreo"
+        id="email"
         value={inputCorreo}
         onChange={handleChange}
       />
       <BotonSubmit isDisabled={isDisabled} />
-      <Example />
     </form>
   );
 }

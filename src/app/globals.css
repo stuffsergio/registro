@@ -31,9 +31,11 @@ body {
 
 li {
   font-family: var(--secondary-font);
+  letter-spacing: -0.5px;
 }
 label {
   font-family: var(--secondary-font);
+  letter-spacing: -0.3px;
 }
 input {
   font-family: var(--secondary-font);

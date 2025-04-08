@@ -7,13 +7,8 @@ export default function BotonSubmit() {
   const [isLoading, setIsLoading] = useState(false);
 
   function handleClick() {
-    if (inputNombre.value === "" || inputCorreo.value === "") {
-      const buttonSubmit = document.getElementById("buttonSubmit");
-      buttonSubmit.style.cursor = "not-allowed";
-    } else {
-      setIsLoading(true);
-      router.push("/registroExitoso");
-    }
+    setIsLoading(true);
+    router.push("/registroExitoso");
   }
 
   return (
@@ -22,7 +17,7 @@ export default function BotonSubmit() {
         id="buttonSubmit"
         type="button"
         onClick={handleClick}
-        className="w-fit px-2.5 py-1 rounded-md bg-[#360000] text-white xl:text-sm sm:text-xs hover:bg-[#360000]/80"
+        className="w-fit px-2.5 py-1 rounded-md bg-[#360000] text-white xl:text-sm sm:text-sm md:text-md xs:text-xs hover:bg-[#360000]/80"
       >
         {isLoading ? "Cargando..." : "Submit"}
       </button>

@@ -7,10 +7,10 @@ export default function NavBar() {
 
   return (
     <nav className="relative h-10 text-center flex justify-center items-center rounded-xl border border-white/80 backdrop-blur-xs">
-      <ul className="flex xl:space-x-40 sm:space-x-50 items-center xl:text-sm sm:from-neutral-900 text-white">
+      <ul className="flex xl:space-x-40 sm:space-x-30 items-center xl:text-md md:text-xs xs:text-xs text-white">
         <li
           className={`group px-2 py-4 cursor-pointer ${
-            serviciosMenu ? "bg-gray-300/20 px-0 rounded-xl text-white" : ""
+            serviciosMenu ? "bg-transparent px-0 rounded-xl text-white" : ""
           }`}
           onMouseEnter={() => setServiciosMenu(true)}
           onMouseLeave={() => setServiciosMenu(false)}
@@ -18,7 +18,7 @@ export default function NavBar() {
         >
           Servicios
           {serviciosMenu && (
-            <ul className="absolute left-1/2 top-9 transform -translate-x-1/2 min-h-[10vh] w-full flex flex-row justify-evenly items-center align-top text-black bg-gray-300/20 rounded-xl border border-white/90 backdrop-blur-xl">
+            <ul className="absolute left-1/2 top-9 transform -translate-x-1/2 min-h-[10vh] w-full flex flex-row justify-evenly items-center align-top text-black rounded-xl border border-white/90">
               <li>Diseño Web</li>
               <li>Marketing</li>
               <li>SEO</li>

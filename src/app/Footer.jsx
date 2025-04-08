@@ -13,7 +13,8 @@ export default function Footer() {
       Una iniciativa de
       <a
         href="https://www.instagram.com/stuffsergio/"
-        className="hover:shadow-2xl hover:shadow-gray-800"
+        target="_blank"
+        className="hover:[text-shadow:_0px_0px_10px_#fff]"
       >
         @stuffsergio
       </a>
