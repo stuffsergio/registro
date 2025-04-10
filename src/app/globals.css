@@ -29,17 +29,11 @@ body {
   color: var(--secondary);
 }
 
+ul,
 li {
   font-family: var(--secondary-font);
-  letter-spacing: -0.5px;
+  letter-spacing: 0.7px;
 }
-label {
-  font-family: var(--secondary-font);
-  letter-spacing: -0.3px;
-}
-input {
-  font-family: var(--secondary-font);
-}
-button {
-  font-family: var(--primary-font);
+footer {
+  font-family: Arial, Helvetica, sans-serif;
 }
